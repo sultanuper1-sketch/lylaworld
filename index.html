@@ -3,43 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عالم ليلى للساعات | Lyla World</title>
+    <title>عالم ليلى | Lyla World - متجر الساعات الفاخرة</title>
     <link rel="stylesheet" href="style.css">
+    <!-- استيراد خط عربي أنيق من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">عالم ليلى</div>
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#">الساعات النسائية</a>
-            <a href="#">الساعات الرجالية</a>
-        </nav>
-    </header>
 
-    <main>
+    <div class="container">
+        <header>
+            <div class="logo">عالم ليلى</div>
+            <nav>
+                <a href="#">الرئيسية</a>
+                <a href="#">الساعات النسائية</a>
+                <a href="#">الساعات الرجالية</a>
+                <a href="#">من نحن</a>
+            </nav>
+        </header>
+
         <section class="hero">
-            <h1>اكتشف الأناقة والجمال في كل ثانية</h1>
-            <button class="btn">تسوق الآن</button>
+            <div class="hero-content">
+                <h1>اكتشف الأناقة والجمال في كل ثانية</h1>
+                <button class="btn-shop">تسوق الآن</button>
+            </div>
         </section>
 
         <section class="products">
-            <!-- كرت المنتج الأول -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=300" alt="ساعة">
-                <h3>ساعة ليلى الفاخرة</h3>
-                <p class="price">750 ر.س</p>
-                <button onclick="checkout(750)">شراء الآن</button>
-            </div>
-            
-            <!-- يمكنك نسخ هذا الـ div وتغيير البيانات لإضافة ساعات أخرى -->
-        </section>
-    </main>
+            <h2>أحدث المنتجات</h2>
+            <div class="product-grid">
+                
+                <!-- المنتج الأول -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&q=80" alt="ساعة ليلى الكلاسيكية">
+                    <h3>ساعة 'ليلى' الكلاسيكية</h3>
+                    <p class="description">تصميم خالد يجمع بين الفخامة والبساطة.</p>
+                    <div class="price-row">
+                        <span class="price">750 ر.س</span>
+                        <button class="btn-add">إضافة للسلة</button>
+                    </div>
+                </div>
 
-    <script>
-        function checkout(price) {
-            // هنا ستضع رابط بوابة الدفع الخاصة بك
-            alert("سيتم توجيهك الآن لإتمام عملية الدفع بمبلغ " + price + " ر.س");
-        }
-    </script>
+                <!-- المنتج الثاني -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&q=80" alt="ساعة ليلى الذهبية">
+                    <h3>ساعة 'ليلى' الذهبية</h3>
+                    <p class="description">تألقي بلمسة من الذهب الخالص والألماس.</p>
+                    <div class="price-row">
+                        <span class="price">175 ر.س</span>
+                        <button class="btn-add">إضافة للسلة</button>
+                    </div>
+                </div>
+
+                <!-- المنتج الثالث -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1619134778701-685d26b6c1a6?w=400&q=80" alt="ساعة ليلى الرياضية">
+                    <h3>ساعة 'ليلى' الرياضية</h3>
+                    <p class="description">عملية وأنيقة، تناسب نمط حياتك العصري.</p>
+                    <div class="price-row">
+                        <span class="price">175 ر.س</span>
+                        <button class="btn-add">إضافة للسلة</button>
+                    </div>
+                </div>
+
+                <!-- المنتج الرابع -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1620625105656-80678117b887?w=400&q=80" alt="ساعة ليلى الجلدية">
+                    <h3>ساعة 'ليلى' الجلدية</h3>
+                    <p class="description">سوار من الجلد الطبيعي الفاخر لراحة دائمة.</p>
+                    <div class="price-row">
+                        <span class="price">175 ر.س</span>
+                        <button class="btn-add">إضافة للسلة</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2026 عالم ليلى. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
