@@ -1,14 +1,182 @@
 /* إعدادات عامة */
-body { font-family: 'Arial', sans-serif; margin: 0; background-color: #fdfbf7; text-align: center; }
+body {
+    font-family: 'Cairo', sans-serif; /* تطبيق الخط العربي */
+    margin: 0;
+    background-color: #fdfbf7; /* لون الخلفية الفاتح من الصورة */
+    color: #333;
+}
 
-header { display: flex; justify-content: space-between; padding: 20px 50px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.logo { font-size: 24px; font-weight: bold; color: #5d1b1b; }
-nav a { margin: 0 15px; text-decoration: none; color: #333; }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-.hero { padding: 80px 20px; background-color: #333; color: white; }
-.btn { padding: 15px 30px; background-color: #5d1b1b; color: white; border: none; cursor: pointer; border-radius: 5px; margin-top: 20px; }
+/* الهيدر (الشعار والقائمة) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-.products { display: flex; justify-content: center; gap: 20px; padding: 50px; flex-wrap: wrap; }
-.card { background: white; padding: 20px; border-radius: 10px; width: 250px; border: 1px solid #ddd; }
-.card img { width: 100%; border-radius: 5px; }
-.price { font-weight: bold; color: #5d1b1b; margin: 10px 0; }
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5d1b1b; /* اللون العنابي الغامق للشعار */
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #5d1b1b;
+}
+
+/* قسم البانر الرئيسي (Hero Section) */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1604093882750-3c49895b31b8?q=80&w=1920'); /* صورة خلفية للساعات */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية شبه شفافة للنص */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-shop {
+    padding: 15px 40px;
+    background-color: #b8860b; /* اللون الذهبي للزر */
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-shop:hover {
+    background-color: #996e09;
+}
+
+/* قسم المنتجات */
+.products {
+    margin: 80px 0;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #5d1b1b;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* شبكة متجاوبة */
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* تأثير حركة عند المرور بالفأرة */
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* لضبط الصور داخل الكرت */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card .description {
+    font-size: 14px;
+    color: #777;
+    height: 40px; /* لتثبيت ارتفاع الوصف */
+    margin-bottom: 15px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5d1b1b;
+}
+
+.btn-add {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #555;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    color: #888;
+    margin-top: 50px;
+}
+
+/* تصميم متجاوب (للهواتف) */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 32px; }
+    header { padding: 20px; }
+    .nav a { margin: 0 5px; font-size: 14px; }
+}
