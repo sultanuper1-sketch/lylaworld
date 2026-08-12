@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عالم ليلى | Lyla World</title>
+    <title>عالم ليلى للساعات | Lyla World</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,19 +13,33 @@
             <a href="#">الرئيسية</a>
             <a href="#">الساعات النسائية</a>
             <a href="#">الساعات الرجالية</a>
-            <a href="#">إكسسوارات</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>اكتشف الأناقة والجمال في كل ثانية</h1>
-        <button class="btn">تسوق الآن</button>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>اكتشف الأناقة والجمال في كل ثانية</h1>
+            <button class="btn">تسوق الآن</button>
+        </section>
 
-    <section class="products">
-        <div class="product-card">ساعة "ليلى" الذهبية الفاخرة - 850 ر.س</div>
-        <div class="product-card">ساعة "ليلى" الكلاسيكية - 700 ر.س</div>
-        <div class="product-card">ساعة "ليلى" الرياضية - 950 ر.س</div>
-    </section>
+        <section class="products">
+            <!-- كرت المنتج الأول -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=300" alt="ساعة">
+                <h3>ساعة ليلى الفاخرة</h3>
+                <p class="price">750 ر.س</p>
+                <button onclick="checkout(750)">شراء الآن</button>
+            </div>
+            
+            <!-- يمكنك نسخ هذا الـ div وتغيير البيانات لإضافة ساعات أخرى -->
+        </section>
+    </main>
+
+    <script>
+        function checkout(price) {
+            // هنا ستضع رابط بوابة الدفع الخاصة بك
+            alert("سيتم توجيهك الآن لإتمام عملية الدفع بمبلغ " + price + " ر.س");
+        }
+    </script>
 </body>
 </html>
